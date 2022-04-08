@@ -11,23 +11,13 @@
 	
 	<!-- @RequestParam, @GetMapping, @PostMapping, @ModelAttribute 자동인식 -->
 	<annotation-driven />
-
-	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
-	<resources mapping="/resources/**" location="/resources/" />
-
-	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
-	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<beans:property name="prefix" value="/WEB-INF/views/" />
-		<beans:property name="suffix" value=".jsp" />
-	</beans:bean>
 	
 	<!-- "공유객체고 나발이고 걍 다 디스패처가 생성하게 해라"라는 뜻이 됨 -->
 	<!-- <context:component-scan base-package="com.mycompany.webapp"/> -->
 	
 	<!-- @Controller, @Component를 만나면 해당 어노테이션이 적용된 클래스를 객체로 생성하고,
 	@PostConstruct, @PreDestroy, @Resource, @Autowired, @Inject, @Value을 만나면 (생성은 아니고) 자동인식 -->
-	<context:component-scan base-package="com.mycompany.webapp"
-		use-default-filters="false">
+	<context:component-scan base-package="com.mycompany.webapp">
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
 	</context:component-scan>
