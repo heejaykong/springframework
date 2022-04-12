@@ -11,7 +11,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="/webapp/resources/css/app.css" />
   </head>
@@ -38,7 +38,7 @@
           <div class="col-md-4 bg-dark p-3">
 						<div class="h-100 d-flex flex-column">
 							<div class="flex-grow-1" style="height: 0px; overflow-y: auto; overflow-x: hidden;">
-                                <%@ include file="/WEB-INF/views/common/menu.jsp" %>
+                <%@ include file="/WEB-INF/views/common/menu.jsp" %>
 							</div>
 						</div>
           </div>
