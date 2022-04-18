@@ -1,32 +1,30 @@
-<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page contentType="text/html; charset=UTF-8"%>
 
-<%@ include file="/WEB-INF/views/common/header.jsp" %>
+<%@ include file="/WEB-INF/views/common/header.jsp"%>
 
 <div class="card m-2">
-	<div class="card-header">
-		FileUpload & FileDownload
-	</div>
+	<div class="card-header">FileUpload & FileDownload</div>
 	<div class="card-body">
 		<div class="card">
-			<div class="card-header">
-				Form 태그를 이용한 FileUpload
-			</div>
+			<div class="card-header">Form 태그를 이용한 FileUpload</div>
 			<div class="card-body">
-				<form method="post" enctype="multipart/form-data" action="fileupload">
+				<form method="post" enctype="multipart/form-data"
+					action="fileupload">
 					<div class="form-group">
-						<label for="title">File Title</label> 
-						<input type="text" class="form-control" id="title" name="title" placeholder="제목">
+						<label for="title">File Title</label> <input type="text"
+							class="form-control" id="title" name="title" placeholder="제목">
 					</div>
 					<div class="form-group">
-						<label for="desc">File Description</label> 
-						<input type="text" class="form-control" id="desc" name="desc" placeholder="설명">
+						<label for="desc">File Description</label> <input type="text"
+							class="form-control" id="desc" name="desc" placeholder="설명">
 					</div>
 					<div class="form-group">
-					    <label for="attach">Example file input</label>
-					    <input type="file" class="form-control-file" id="attach" name="attach" multiple>
-				  	</div>
-				  	<button class="btn btn-info btn-sm">Form 파일 업로드</button>
-				  	<a href="javascript:fileupload()" class="btn btn-info btn-sm">AJAX 파일 업로드</a>
+						<label for="attach">Example file input</label> <input type="file"
+							class="form-control-file" id="attach" name="attach" multiple>
+					</div>
+					<button class="btn btn-info btn-sm">Form 파일 업로드</button>
+					<a href="javascript:fileupload()" class="btn btn-info btn-sm">AJAX
+						파일 업로드</a>
 				</form>
 			</div>
 			<script>
@@ -61,19 +59,23 @@
 				}
 			</script>
 		</div>
-	
+
 		<div class="card">
-			<div class="card-header">
-				File Downlaod
-			</div>
+			<div class="card-header">File Downlaod</div>
 			<div class="card-body">
-				<a href="filedownload?fileNo=1"
-				   class="btn btn-info btn-sm">파일 다운로드</a>
-				<hr/>
-				<img src="filedownload?fileNo=1" width="200px"/>
+				<a href="filedownload?fileNo=1" class="btn btn-info btn-sm"
+					onclick="filedownload(1)">파일 다운로드</a>
+				<hr />
+				<img id="downloadedIng" width="200px" />
 			</div>
+			<script type="text/javascript">
+				function filedownload(fileNo){
+					// 특이하게도 src에 URL이 아닌 요청경로를 넣어줘도 해당 이미지가 뜬다.
+					$("#downloadedIng").attr("src", "filedownload?fileNo=" + fileNo);
+				}
+			</script>
 		</div>
 	</div>
 </div>
 
-<%@ include file="/WEB-INF/views/common/footer.jsp" %>
+<%@ include file="/WEB-INF/views/common/footer.jsp"%>

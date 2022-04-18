@@ -15,7 +15,7 @@
 	<!-- "공유객체고 나발이고 걍 다 디스패처가 생성하게 해라"라는 뜻이 됨 -->
 	<!-- <context:component-scan base-package="com.mycompany.webapp"/> -->
 	
-	<!-- @Controller, @Component를 만나면 해당 어노테이션이 적용된 클래스를 객체로 생성하고,
+	<!-- @Controller, @Component를 만나면 @Controller, @Component이 적용된 클래스를 객체로 생성하고,
 	@PostConstruct, @PreDestroy, @Resource, @Autowired, @Inject, @Value을 만나면 (생성은 아니고) 자동인식 -->
 	<context:component-scan base-package="com.mycompany.webapp">
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>

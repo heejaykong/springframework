@@ -28,6 +28,12 @@
 			<!-- <param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value> -->
 			<param-value>classpath:spring/dispatcher/*.xml</param-value>
 		</init-param>
+		<!-- 404일 경우 500에러로 억지로 발생시키는 설정 -->
+		<init-param>
+			<param-name>throwExceptionIfNoHandlerFound</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		
 		<!-- 배치할 때 DispatcherServlet 객체를 미리 생성하도록 설정 -->
 		<load-on-startup>1</load-on-startup>
 		
@@ -66,4 +72,15 @@
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+	
+	<!-- 404 에러 처리 -->
+	<!-- 방법1. -->
+	<!-- <error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/views/ch10/404.jsp</location>
+	</error-page> -->
+	
+	<!-- 방법2. -->
+	<!-- throwExceptionIfNoHandlerFound 설정해줘야 함(위에 <init-param> 태그 보기) -->
+	
 </web-app>
