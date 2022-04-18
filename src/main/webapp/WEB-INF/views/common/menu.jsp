@@ -24,4 +24,35 @@
       <a href="${pageContext.request.contextPath}/ch04/content" class="text-white">Controller/Validation</a>
     </h6>
   </li>
+  <li class="nav-item mb-2">
+    <h6 class="text-white">
+      <span class="mr-2">Ch05.</span>
+      <!-- 얘네도 다 get 방식임. a태그잖슴. -->
+      <a href="${pageContext.request.contextPath}/ch05/content" class="text-white">Controller/Header & Cookie</a>
+    </h6>
+  </li>
+  <li class="nav-item mb-2">
+    <h6 class="text-white">
+      <span class="mr-2">Ch06.</span>
+      <a href="${pageContext.request.contextPath}/ch06/content" class="text-white">Controller/Forward & Redirect</a>
+    </h6>
+  </li>
+  <li class="nav-item mb-2">
+    <h6 class="text-white">
+      <span class="mr-2">Ch07.</span>
+      <a href="${pageContext.request.contextPath}/ch07/content" class="text-white">Controller/Data Delivery</a>
+    </h6>
+  </li>
+  <li class="nav-item mb-2">
+    <h6 class="text-white">
+      <span class="mr-2">Ch08.</span>
+      <a href="${pageContext.request.contextPath}/ch08/content" class="text-white">Controller/Session Support</a>
+    </h6>
+  </li>
+  <li class="nav-item mb-2">
+    <h6 class="text-white">
+      <span class="mr-2">Ch09.</span>
+      <a href="${pageContext.request.contextPath}/ch09/content" class="text-white">Controller/File Upload & Download</a>
+    </h6>
+  </li>
 </ul>
